@@ -13,6 +13,11 @@ multiplier reset
  *
  */
 
+/*
+ * dependencies:
+ *   bastl https://github.com/ukyzky/bastl/tree/feature/littlenerd
+ */
+
 #ifdef EXTERNAL_IDE
 
 #include <Arduino.h>
@@ -28,6 +33,8 @@ int main(void) {
   }
 }
 
+#else
+#include <EEPROM.h>
 #endif
 #include <avr/pgmspace.h>
 #include <portManipulations.h>
@@ -840,7 +847,3 @@ void loop() {
 	}
 }
 }
-
-
-
-
